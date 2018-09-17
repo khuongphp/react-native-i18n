@@ -1,3 +1,7 @@
+## ⚠️ Deprecated
+
+_This library is deprecated in favor of [react-native-languages](https://github.com/react-community/react-native-languages). You can use react-native-languages with [I18n-js](https://github.com/fnando/i18n-js) (but also with [react-intl](https://github.com/yahoo/react-intl), [react-i18next](https://github.com/i18next/react-i18next), etc. The choice is yours!) and the required change will take only a few minutes: a full [example](https://github.com/react-community/react-native-languages/tree/master/example) is provided._
+
 <img src="https://cdn0.iconfinder.com/data/icons/material-design-ii-glyph/614/3010_-_Translate-512.png" width="100" align="left" />
 
 # react-native-i18n
@@ -20,7 +24,7 @@ Integrates [I18n.js](https://github.com/fnando/i18n-js) with React Native. Uses 
 
 After installing the npm package you need to link the native modules.
 
-If you're using React-Native >= 0.29 just link the library with the command `react-native link`.
+If you're using React-Native >= 0.29 just link the library with the command `react-native link react-native-i18n`.
 
 If you're using React-Native < 0.29, install [rnpm](https://github.com/rnpm/rnpm) with the command `npm install -g rnpm` and then link the library with the command `rnpm link`.
 
@@ -96,9 +100,7 @@ protected List<ReactPackage> getPackages() {
 
 After that, you will need to recompile your project with `react-native run-android`.
 
-**Note: You'll need to install Android build tools 25.0.2**
-
-![android install](https://github.com/AlexanderZaytsev/react-native-i18n/blob/master/docs/android-install.png?raw=true)
+**⚠️ Important: You'll need to install Android build tools 27.0.3**
 
 ## Usage
 
@@ -174,8 +176,8 @@ class Demo extends React.Component {
 
 When fallbacks are enabled (which is generally recommended), `i18n.js` will try to look up translations in the following order (for a device with `en_US` locale):
 
-* en-US
-* en
+- en-US
+- en
 
 **Note**: iOS 8 locales use underscored (`en_US`) but `i18n.js` locales are dasherized (`en-US`). This conversion is done automatically for you.
 
